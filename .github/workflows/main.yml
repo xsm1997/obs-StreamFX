@@ -76,7 +76,7 @@ jobs:
         curl -L -o "aom.7z" "https://github.com/Xaymar/aom/releases/download/v${{ env.LIBAOM_VERSION }}/aom-windows-64-shared.7z"
         7z x -y -o"build/libaom/" "aom.7z"
     - name: "Code Signing"
-      if: ${{ github.event_name != 'pull_request' }}
+      if: false
       id: codesign
       shell: bash
       run: |
